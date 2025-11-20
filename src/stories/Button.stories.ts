@@ -8,6 +8,15 @@ const meta: Meta<ButtonComponent> = {
   title: 'Example/Button',
   component: ButtonComponent,
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      subtitle: 'Accessible call-to-action button',
+      description: {
+        component:
+          'Use the Button component for any primary or secondary call-to-action. It exposes size, emphasis and background color knobs so you can adapt it to different surfaces without redesigning the markup.',
+      },
+    },
+  },
   argTypes: {
     backgroundColor: {
       control: 'color',
@@ -26,11 +35,25 @@ export const Primary: Story = {
     primary: true,
     label: 'Button',
   },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Use the primary version for the most important action on a view. It switches to the solid accent style and keeps the same API.',
+      },
+    },
+  },
 };
 
 export const Secondary: Story = {
   args: {
     label: 'Button',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Default button style for secondary or less prominent actions. Pair it with the primary button to create a hierarchy.',
+      },
+    },
   },
 };
 
@@ -39,11 +62,25 @@ export const Large: Story = {
     size: 'large',
     label: 'Button',
   },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Large buttons increase tap targets on touch-heavy layouts or hero sections. No other props change.',
+      },
+    },
+  },
 };
 
 export const Small: Story = {
   args: {
     size: 'small',
     label: 'Button',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Small buttons suit dense UI such as toolbars or tables. Keep labels short so the control remains readable.',
+      },
+    },
   },
 };

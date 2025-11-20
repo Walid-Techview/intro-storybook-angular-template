@@ -5,17 +5,17 @@ import { HeaderComponent } from './header.component';
 import type { User } from './user';
 
 @Component({
-  selector: 'storybook-page',
+  selector: 'rva-page',
   standalone: true,
   imports: [CommonModule, HeaderComponent],
   template: `<article>
-  <storybook-header
+  <rva-header
     [user]="user"
     (onLogout)="doLogout()"
     (onLogin)="doLogin()"
     (onCreateAccount)="doCreateAccount()"
-  ></storybook-header>
-  <section class="storybook-page">
+  ></rva-header>
+  <section class="rva-page">
     <h2>Pages in Storybook</h2>
     <p>
       We recommend building UIs with a
